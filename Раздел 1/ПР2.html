@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПР 2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="../Главная.html" class="nav-link-g">ГЛАВНАЯ</a>
+            </nav>
+            <h1 class="logo">Практическая работа №2</h1>
+            <nav class="nav">
+                <a href="#" class="nav-link active" data-tab="terminal">Консоль</a>
+                <a href="#" class="nav-link" data-tab="theory">Справка</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            
+            <section id="terminal" class="content-block active">
+                <div class="block-header">
+                    <h2>Интерактивная консоль</h2>
+                    <div class="icon">💻</div>
+                </div>
+                <div class="flex-content">
+                    <div class="text-col full-width">
+                        <div class="terminal-container">
+                            <div class="terminal-header">
+                                <div class="terminal-buttons">
+                                    <span class="btn-red"></span>
+                                    <span class="btn-yellow"></span>
+                                    <span class="btn-green"></span>
+                                </div>
+                                <div class="terminal-title">user@altlinux:~</div>
+                            </div>
+                            <div class="terminal-body" id="terminalBody"></div>
+                        </div>
+
+                        <div class="editor-controls">
+                            <div class="quick-commands">
+                                <span>Гарантированные команды:</span>
+                                <button class="cmd-btn" data-cmd="whoami">whoami</button>
+                                <button class="cmd-btn" data-cmd="pwd">pwd</button>
+                                <button class="cmd-btn" data-cmd="uname -a">uname -a</button>
+                                <button class="cmd-btn" data-cmd="id">id</button>
+                                <button class="cmd-btn" data-cmd="ls">ls</button>
+                                <button class="cmd-btn" data-cmd="help">help</button>
+                            </div>
+
+                            <textarea class="code-editor" id="codeEditor" placeholder="Введите команду..."></textarea>
+                            <div class="actions">
+                                <button id="runBtn" class="submit-btn">Выполнить</button>
+                                <button id="clearBtn" class="nav-btn">Очистить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="theory" class="content-block">
+                <div class="block-header">
+                    <h2>Справка</h2>
+                    <div class="icon">📖</div>
+                </div>
+                <div class="flex-content">
+                    <div class="text-col">
+                        <p>В этой версии эмулятора работают только базовые команды, которые есть в любой Linux-системе «из коробки».</p>
+                        <ul>
+                            <li><code>whoami</code> — имя пользователя.</li>
+                            <li><code>pwd</code> — текущая папка.</li>
+                            <li><code>uname -a</code> — информация о ядре.</li>
+                            <li><code>id</code> — ID пользователя и группы.</li>
+                            <li><code>ls</code> — список файлов.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <nav class="nav">
+            <a href="../Главная.html" class="nav-link-g">ГЛАВНАЯ</a>
+        </nav>
+        <div class="container">
+            <p>&copy; 2026 УАвиаК-МЦК</p>
+        </div>
+    </footer>
+
+    <script src="ПР2.js"></script>
+</body>
+</html>

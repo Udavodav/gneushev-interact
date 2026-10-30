@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Антивирусное ПО</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="../Главная.html" class="nav-link-g">ГЛАВНАЯ</a>
+            </nav>
+            <h1 class="logo">Тема 2: Антивирусное ПО. Назначение. Виды</h1>
+            <nav class="nav">
+                <a href="#section1" class="nav-link">Назначение и угрозы</a>
+                <a href="#section2" class="nav-link">Методы обнаружения</a>
+                <a href="#section3" class="nav-link">Виды антивирусов</a>
+                <a href="#section4" class="nav-link">Российские решения</a>
+                <a href="#section5" class="nav-link">Комплексная защита</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            
+            <section id="section1" class="content-block">
+                <div class="block-header">
+                    <h2>Назначение и классификация угроз</h2>
+                    <div class="icon">🛡️</div>
+                </div>
+                <div class="flex-content">
+                    <div class="text-col">
+                        <p>Антивирусное программное обеспечение — это класс программ, предназначенных для обнаружения, предотвращения и удаления вредоносного кода (Malware), а также защиты конфиденциальных данных пользователя.</p>
+                        <p><strong>Основные типы вредоносных программ:</strong></p>
+                        <ul>
+                            <li><strong>Компьютерные вирусы:</strong> Внедряют свой код в другие программы и активируются при их запуске.</li>
+                            <li><strong>Сетевые черви (Worms):</strong> Самостоятельно распространяются по сети, используя уязвимости ОС, не заражая файлы.</li>
+                            <li><strong>Троянские программы (Trojans):</strong> Маскируются под легитимное ПО. Не размножаются сами, но открывают удаленный доступ (Backdoor) или крадут данные.</li>
+                            <li><strong>Шпионское ПО (Spyware) и Adware:</strong> Собирают информацию о пользователе или показывают навязчивую рекламу.</li>
+                            <li><strong>Программы-вымогатели (Ransomware):</strong> Шифруют файлы пользователя и требуют выкуп за ключ расшифровки.</li>
+                            <li><strong>Руткиты (Rootkits):</strong> Скрывают свое присутствие в системе, модифицируя ядро ОС.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section2" class="content-block">
+                <div class="block-header">
+                    <h2>Методы обнаружения угроз</h2>
+                    <div class="icon">🔬</div>
+                </div>
+                <div class="flex-content">
+                    <div class="img-col">
+                        <div class="img-placeholder">
+                            <img src="img/Методы обнаружения угроз.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="text-col">
+                        <p>Современные антивирусы используют комбинацию нескольких технологий для обеспечения максимальной защиты.</p>
+                        <ul>
+                            <li><strong>Сигнатурный анализ:</strong> Сравнение кода файла с базой данных известных вирусов (сигнатур). Эффективен против старых угроз, требует постоянных обновлений.</li>
+                            <li><strong>Эвристический анализ:</strong> Поиск подозрительных команд и структур кода, характерных для вредоносного ПО, даже если его нет в базе.</li>
+                            <li><strong>Поведенческий анализ (Behavioral Blocking):</strong> Мониторинг действий программ в реальном времени. Если процесс пытается зашифровать много файлов или изменить системный реестр, он блокируется.</li>
+                            <li><strong>Облачные проверки (Cloud AI):</strong> Отправка хешей подозрительных файлов в облако вендора для мгновенной проверки по глобальной базе данных.</li>
+                            <li><strong>Песочница (Sandbox):</strong> Запуск подозрительного файла в изолированной виртуальной среде для наблюдения за его поведением без риска для реальной системы.</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <section id="section3" class="content-block">
+                <div class="block-header">
+                    <h2>Виды антивирусного ПО</h2>
+                    <div class="icon">📦</div>
+                </div>
+                <div class="flex-content">
+                    <div class="text-col">
+                        <p>Классификация по способу установки и области защиты.</p>
+                        <ul>
+                            <li><strong>Сканеры (On-Demand):</strong> Запускаются пользователем вручную для проверки системы по требованию.</li>
+                            <li><strong>Мониторы (On-Access / Real-time):</strong> Работают в фоновом режиме, проверяя каждый открываемый файл «на лету».</li>
+                            <li><strong>Специализированные:</strong> Антируткиты, антитрояны, шифровальщики (например, Kaspersky Rescue Disk для лечения неактивной системы).</li>
+                            <li><strong>Сетевые экраны (Firewalls / IDS):</strong> Контролируют сетевой трафик, блокируя несанкционированные подключения.</li>
+                            <li><strong>Для почтовых серверов:</strong> Проверяют входящий и исходящий поток писем на наличие вложений с вирусами.</li>
+                            <li><strong>Для мобильных устройств:</strong> Защищают от фишинга, кражи данных и вредоносных приложений в Android/iOS.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- НОВАЯ ТЕОРИЯ -->
+            <section id="section4" class="content-block">
+                <div class="block-header">
+                    <h2>Российские антивирусные решения</h2>
+                    <div class="icon">🇷🇺</div>
+                </div>
+                <div class="flex-content">
+                    <div class="img-col">
+                        <div class="img-placeholder">
+                            <img src="img/Российские антивирусные.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="text-col">
+                        <p>Российские разработчики антивирусов признаны одними из мировых лидеров в области кибербезопасности. Их продукты широко используются как в госсекторе, так и в частном бизнесе.</p>
+                        <ul>
+                            <li><strong>Лаборатория Касперского (Kaspersky):</strong> Один из мировых лидеров. Продукты: Kaspersky Standard/Plus/Total Security (для дома), Kaspersky Endpoint Security (для бизнеса). Известны мощным эвристическим анализом.</li>
+                            <li><strong>Dr.Web:</strong> Один из старейших отечественных антивирусов. Отличается высокой лояльностью к системе и наличием лечащих утилит (Dr.Web CureIt!).</li>
+                            <li><strong>ESET NOD32:</strong> Хотя компания словацкая, разработка движка долгое время велась в России/СНГ. Популярен за счет высокой скорости работы и низкого потребления ресурсов.</li>
+                            <li><strong>PRO32 (бывший Agnitum Outpost):</strong> Акцент на проактивную защиту и качественный персональный брандмауэр.</li>
+                            <li><strong>ViPNet:</strong> Продукты компании «Инфотекс». Ориентированы на защиту государственных информационных систем и корпоративного сектора с жесткими требованиями к шифрованию.</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!-- НОВАЯ ТЕОРИЯ -->
+            <section id="section5" class="content-block">
+                <div class="block-header">
+                    <h2>Комплексная защита и UTM</h2>
+                    <div class="icon">⚙️</div>
+                </div>
+                <div class="flex-content">
+                    <div class="text-col">
+                        <p>Современная защита не ограничивается только поиском вирусов. Понятие «Антивирус» расширилось до «Решения по кибербезопасности».</p>
+                        <ul>
+                            <li><strong>Многоуровневая защита (Defense in Depth):</strong> Подход, при котором защита строится слоями: защита сети (Firewall), защита конечных точек (Endpoint), защита почты и веб-шлюз.</li>
+                            <li><strong>EDR (Endpoint Detection and Response):</strong> Системы для бизнеса, которые не просто блокируют угрозу, но и записывают историю действий на компьютере для расследования инцидента.</li>
+                            <li><strong>UTM (Unified Threat Management):</strong> Шлюзы безопасности «всё в одном». Объединяют в одном устройстве антивирус, антиспам, межсетевой экран и VPN.</li>
+                            <li><strong>Антифишинг:</strong> Проверка ссылок и сайтов на подлинность для предотвращения кражи паролей.</li>
+                            <li><strong>Менеджеры паролей:</strong> Инструменты для генерации и безопасного хранения сложных паролей в зашифрованном хранилище.</li>
+                            <li><strong>Родительский контроль:</strong> Ограничение доступа к нежелательному контенту и контроль времени за устройством.</li>
+                        </ul>
+                    </div>
+                    <div class="img-col">
+                        <div class="img-placeholder">
+                            <img src="img/Комплексная защита и UTM.png" alt="">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <nav class="nav">
+                <a href="../Главная.html" class="nav-link-g">ГЛАВНАЯ</a>
+            </nav>
+            <div class="container">
+                <p>&copy; 2026 УАвиаК-МЦК</p>
+            </div>
+        </footer>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Компьютерные сети</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="../Главная.html" class="nav-link-g">ГЛАВНАЯ</a>
+            </nav>
+            <h1 class="logo">Тема 3: Компьютерные сети. Локальные и глобальные</h1>
+            <nav class="nav">
+                <a href="#section1" class="nav-link">Основные понятия</a>
+                <a href="#section2" class="nav-link">Локальные сети (LAN)</a>
+                <a href="#section3" class="nav-link">Глобальные сети (WAN)</a>
+                <a href="#section4" class="nav-link">Топологии</a>
+                <a href="#section5" class="nav-link">Модель OSI</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            
+            <section id="section1" class="content-block">
+                <div class="block-header">
+                    <h2>Основные понятия и назначение</h2>
+                    <div class="icon">🌐</div>
+                </div>
+                <div class="flex-content">
+                    <div class="text-col">
+                        <p>Компьютерная сеть — это совокупность компьютеров и других устройств (серверов, маршрутизаторов, коммутаторов), соединенных линиями связи для обмена данными и совместного использования ресурсов.</p>
+                        <p><strong>Основные компоненты:</strong></p>
+                        <ul>
+                            <li><strong>Узлы (Nodes):</strong> Компьютеры, принтеры, серверы, мобильные устройства.</li>
+                            <li><strong>Среда передачи:</strong> Кабели (витая пара, оптоволокно) или радиоволны (Wi-Fi).</li>
+                            <li><strong>Сетевое оборудование:</strong> Коммутаторы (соединяют устройства в одной сети), маршрутизаторы (соединяют разные сети).</li>
+                            <li><strong>Протоколы:</strong> Наборы правил обмена данными (TCP/IP, HTTP, FTP).</li>
+                        </ul>
+                        <p><strong>Ключевые ресурсы:</strong> Общие папки и файлы, сетевые принтеры, базы данных, доступ в Интернет, вычислительные мощности.</p>
+                    </div>
+                    <div class="img-col">
+                        <div class="img-placeholder">
+                            <img src="img/Схема Компоненты сети.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section2" class="content-block">
+                <div class="block-header">
+                    <h2>Локальные вычислительные сети (LAN)</h2>
+                    <div class="icon">🏢</div>
+                </div>
+                <div class="flex-content">
+                    <div class="img-col">
+                        <div class="img-placeholder">
+                            <img src="img/Локальные вычислительные сети (LAN).png" alt="">
+                        </div>
+                    </div>
+                    <div class="text-col">
+                        <p>LAN (Local Area Network) — сеть, охватывающая небольшую территорию (здание, офис, квартиру, кампус).</p>
+                        <p><strong>Характеристики LAN:</strong></p>
+                        <ul>
+                            <li><strong>Высокая скорость:</strong> От 100 Мбит/с до 10 Гбит/с и выше.</li>
+                            <li><strong>Низкая задержка (Latency):</strong> Мгновенный отклик при передаче пакетов.</li>
+                            <li><strong>Ограниченная территория:</strong> Обычно до нескольких километров.</li>
+                            <li><strong>Принадлежность:</strong> Сеть принадлежит одной организации или домохозяйству.</li>
+                            <li><strong>Технологии:</strong> Ethernet (кабельное соединение) и Wi-Fi (беспроводное).</li>
+                        </ul>
+                        <p><strong>Проводная LAN:</strong> Строится на базе коммутаторов (Switch) и кабеля «витая пара» (стандарт RJ-45).</p>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <section id="section3" class="content-block">
+                <div class="block-header">
+                    <h2>Глобальные вычислительные сети (WAN)</h2>
+                    <div class="icon">🌍</div>
+                </div>
+                <div class="flex-content">
+                    <div class="text-col">
+                        <p>WAN (Wide Area Network) — сеть, объединяющая локальные сети на больших расстояниях (между городами, странами, континентами).</p>
+                        <p><strong>Характеристики WAN:</strong></p>
+                        <ul>
+                            <li><strong>Огромные расстояния:</strong> От десятков до тысяч километров.</li>
+                            <li><strong>Низкая скорость (относительно LAN):</strong> Зависит от качества каналов связи провайдера.</li>
+                            <li><strong>Высокая задержка:</strong> Время прохождения сигнала ограничено скоростью света в кабеле.</li>
+                            <li><strong>Сложная структура:</strong> Состоит из множества промежуточных узлов провайдеров.</li>
+                        </ul>
+                        <p><strong>Примеры WAN:</strong> Интернет (самая большая WAN), корпоративные сети филиалов банков, государственные сети. Для связи используются выделенные линии, спутниковая связь и технологии MPLS.</p>
+                    </div>
+                    <div class="img-col">
+                        <div class="img-placeholder">
+                            <img src="img/Глобальные вычислительные сети (WAN).png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- НОВАЯ ТЕОРИЯ -->
+            <section id="section4" class="content-block">
+                <div class="block-header">
+                    <h2>Топологии компьютерных сетей</h2>
+                    <div class="icon">🕸️</div>
+                </div>
+                <div class="flex-content">
+                    <div class="img-col">
+                        <div class="img-placeholder">
+                            <img src="img/Топологии компьютерных сетей.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="text-col">
+                        <p>Топология — это схема физического или логического расположения узлов и связей между ними.</p>
+                        <ul>
+                            <li><strong>Шина (Bus):</strong> Все узлы подключены к одному общему кабелю. Устарела, так как обрыв кабеля выводит из строя всю сеть.</li>
+                            <li><strong>Звезда (Star):</strong> Все устройства подключены к центральному узлу (коммутатору). Самый распространенный тип для LAN. При обрыве одного кабеля отключается только одно устройство.</li>
+                            <li><strong>Кольцо (Ring):</strong> Данные передаются по кругу от одного узла к другому. Используется в технологиях типа FDDI или Token Ring.</li>
+                            <li><strong>Ячеистая (Mesh):</strong> Каждый узел связан со многими другими. Обеспечивает максимальную отказоустойчивость (Интернет).</li>
+                            <li><strong>Дерево (Tree):</strong> Иерархическая структура, комбинация нескольких «звезд». Удобна для больших зданий.</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!-- НОВАЯ ТЕОРИЯ -->
+            <section id="section5" class="content-block">
+                <div class="block-header">
+                    <h2>Сетевая модель OSI</h2>
+                    <div class="icon">📑</div>
+                </div>
+                <div class="flex-content">
+                    <div class="text-col">
+                        <p>Модель OSI (Open Systems Interconnection) — концептуальная схема, описывающая, как сетевые протоколы взаимодействуют друг с другом. Состоит из 7 уровней:</p>
+                        <ol>
+                            <li><strong>Физический (Physical):</strong> Кабели, сигналы, биты (0 и 1).</li>
+                            <li><strong>Канальный (Data Link):</strong> Передача кадров (frames) между соседними узлами. MAC-адреса, коммутаторы (Switches).</li>
+                            <li><strong>Сетевой (Network):</strong> Маршрутизация пакетов между разными сетями. IP-адреса, маршрутизаторы (Routers). Протокол IP.</li>
+                            <li><strong>Транспортный (Transport):</strong> Доставка данных между процессами. Контроль ошибок и потока. Порты. Протоколы TCP (надежный) и UDP (быстрый).</li>
+                            <li><strong>Сеансовый (Session):</strong> Управление диалогом (сессией) между приложениями. Открытие, поддержание и закрытие соединений.</li>
+                            <li><strong>Представительский (Presentation):</strong> Кодирование, сжатие и шифрование данных (SSL/TLS, JPEG, ASCII).</li>
+                            <li><strong>Прикладной (Application):</strong> Интерфейс для работы приложений. HTTP (браузеры), FTP (файлы), SMTP (почта).</li>
+                        </ol>
+                        <p>В реальности чаще используется стек протоколов TCP/IP, который объединяет некоторые уровни модели OSI.</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <nav class="nav">
+            <a href="../Главная.html" class="nav-link-g">ГЛАВНАЯ</a>
+        </nav>
+        <div class="container">
+            <p>&copy; 2026 УАвиаК-МЦК</p>
+        </div>
+    </footer>
+
+</body>
+</html>

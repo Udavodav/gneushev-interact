@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПР 1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="../Главная.html" class="nav-link-g">ГЛАВНАЯ</a>
+            </nav>
+            <h1 class="logo">Практическая работа №1</h1>
+            <nav class="nav">
+                <a href="#" class="nav-link active" data-tab="theory">Теория</a>
+                <a href="#" class="nav-link" data-tab="interactive">Конструктор</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            
+            <!-- ВКЛАДКА 1: ТЕОРИЯ -->
+            <section id="theory" class="content-block active">
+                <div class="block-header">
+                    <h2>Свободное моделирование</h2>
+                    <div class="icon">🕸️</div>
+                </div>
+                <div class="flex-content">
+                    <div class="text-col">
+                        <p>В этом режиме нет привязки к шаблонам. Вы сами решаете, где разместить узлы и как их соединить.</p>
+                        <p><strong>Инструкция:</strong> 1. Выберите инструмент "Добавить ПК" и кликните на холст. 2. Выберите "Создать связь" и кликните на два ПК, чтобы соединить их.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ВКЛАДКА 2: ИНТЕРАКТИВ -->
+            <section id="interactive" class="content-block">
+                <div class="block-header">
+                    <h2>Редактор сети</h2>
+                    <div class="icon">🖇️</div>
+                </div>
+                <div class="flex-content">
+                    <div class="text-col full-width">
+                        <div class="controls">
+                            <div class="btn-group">
+                                <button class="tool-btn active" id="tool-node" data-tool="node">Добавить ПК</button>
+                                <button class="tool-btn" id="tool-link" data-tool="link">Создать связь</button>
+                            </div>
+                            <div class="actions">
+                                <button id="clearBtn">Очистить холст</button>
+                            </div>
+                        </div>
+                        <div class="network-canvas" id="networkCanvas"></div>
+                        <div class="log" id="eventLog">Журнал: Выберите инструмент "Добавить ПК".</div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <nav class="nav">
+            <a href="../Главная.html" class="nav-link-g">ГЛАВНАЯ</a>
+        </nav>
+        <div class="container">
+            <p>&copy; 2026 УАвиаК-МЦК</p>
+        </div>
+    </footer>
+
+    <script src="ПР1.js"></script>
+</body>
+</html>

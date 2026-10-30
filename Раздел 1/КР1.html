@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КР 1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/КР1.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="../Главная.html" class="nav-link-g">ГЛАВНАЯ</a>
+            </nav>
+            <h1 class="logo">СР1: Сравнение ТОП-10 основных антивирусных программ</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <header class="quiz-header">
+            <h1>Итоговое тестирование</h1>
+            <div class="progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="counter" id="counter">Вопрос: 1 из 10</div>
+        </header>
+
+        <main class="quiz-main">
+            <div id="quiz"></div>
+        </main>
+
+        <footer class="quiz-footer">
+            <button id="prevBtn" class="nav-btn">Назад</button>
+            <button id="nextBtn" class="nav-btn">Далее</button>
+            <button id="submitBtn" class="nav-btn submit-btn">Завершить тест</button>
+        </footer>
+    </div>
+
+    <!-- Модальное окно результатов -->
+    <div id="resultsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Результаты тестирования</h2>
+            <p id="score">Вы набрали 0 из 10 баллов.</p>
+            <div class="review-list" id="reviewList"></div>
+            <button id="restartBtn" class="submit-btn">Пройти снова</button>
+        </div>
+    </div>
+
+    <script src="КР1.js"></script>
+</body>
+</html>

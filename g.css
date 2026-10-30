@@ -1,0 +1,547 @@
+:root {
+    --primary: #0d47a1;
+    --primary-light: #4285f4;
+    --primary-dark: #0d193d;
+    --bg-page: #f4f7fb;
+    --bg-card: #ffffff;
+    --text-main: #2c3e50;
+    --text-muted: #546e7a;
+    --accent: #ffb300;
+    --radius: 14px;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    --container-width: 1200px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.7;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- HEADER --- */
+.header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: #e3f2fd;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: var(--transition);
+    padding: 0.5rem 0;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    bottom: 0;
+    left: 50%;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.nav-link-g {
+    color: #e3f2fd;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: var(--transition);
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 25px;
+}
+
+.nav-link-g:hover {
+    color: var(--primary-dark);
+    background-color: white;
+}
+
+
+/* --- MAIN CONTENT --- */
+.main {
+    padding: 3rem 0;
+}
+
+.content-block {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow);
+    border: 1px solid #e1e5eb;
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slideUp 0.8s ease-out forwards;
+}
+
+/* Задержка анимации для каждой секции */
+.content-block:nth-child(1) { animation-delay: 0.2s; }
+.content-block:nth-child(2) { animation-delay: 0.4s; }
+.content-block:nth-child(3) { animation-delay: 0.6s; }
+
+.block-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    height: 120px;
+}
+
+.block-header * {
+    width: 100%;
+}
+
+.block-header h3 {
+    font-size: 20px;
+    color: var(--primary-dark);
+    margin: 0;
+    height: 30%;
+}
+
+.icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+/* Линия слева при наведении на заголовок */
+.block-header::before {
+    content: '';
+    position: absolute;
+    left: -2.5rem;
+    top: 0%;
+    transform: translateY(-50%);
+    width: 0px;
+    height: 60px;
+    background: var(--accent);
+    border-radius: 0 10px 10px 0;
+    transition: var(--transition);
+    z-index: -1;
+}
+
+.content-block:hover .block-header::before {
+    width: 70px;
+}
+
+/* --- FLEX LAYOUT --- */
+.flex-content {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.text-col {
+    flex: 2;
+    min-width: 300px;
+}
+
+.img-col {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-placeholder {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-weight: 600;
+    border: 2px dashed #cbd5e1;
+    transition: var(--transition);
+}
+
+.content-block:hover .img-placeholder {
+    transform: scale(1.02);
+    border-color: var(--accent);
+}
+
+/* --- LISTS --- */
+.content-block ul {
+    list-style: none;
+    margin-left: 1.5rem;
+}
+
+.content-block li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.content-block li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* --- FOOTER --- */
+.footer {
+    background: var(--primary-dark);
+    color: #b0bec5;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+
+/* --- KEYFRAMES --- */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Анимация плавного появления текста (эффект набора) */
+.text-col p, .text-col li {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInText 0.6s ease-out forwards;
+}
+
+/* Разная задержка для параграфов и пунктов списка */
+.text-col p:nth-of-type(1) { animation-delay: 0.8s; }
+.text-col p:nth-of-type(2) { animation-delay: 1.0s; }
+.text-col li:nth-of-type(1) { animation-delay: 1.2s; }
+.text-col li:nth-of-type(2) { animation-delay: 1.3s; }
+.text-col li:nth-of-type(3) { animation-delay: 1.4s; }
+.text-col li:nth-of-type(4) { animation-delay: 1.5s; }
+.text-col li:nth-of-type(5) { animation-delay: 1.6s; }
+
+@keyframes fadeInText {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- ADAPTIVITY --- */
+@media (max-width: 900px) {
+    .flex-content {
+        flex-direction: column;
+    }
+    .block-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    .block-header::before {
+        left: -1.5rem;
+        height: 40px;
+    }
+    .content-block {
+        padding: 2rem;
+    }
+    .nav {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .block-header h2 {
+        font-size: 1.6rem;
+    }
+}
+
+.task {
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* --- СТИЛИ ДЛЯ FLEX-ТАБЛИЦЫ (АНТИВИРУСЫ) --- */
+
+.flex-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid #e1e5eb;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--bg-card);
+    box-shadow: var(--shadow);
+    font-size: 0.95rem;
+}
+
+.flex-header {
+    display: flex;
+    font-weight: 600;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    text-align: center;
+}
+
+.flex-row {
+    display: flex;
+    border-bottom: 1px solid #f0f4f8;
+    transition: background 0.2s ease;
+}
+
+.flex-row:last-child {
+    border-bottom: none;
+}
+
+.flex-row:hover {
+    background: rgba(13, 71, 161, 0.03); /* Легкая подсветка при наведении */
+}
+
+.flex-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #f0f4f8;
+}
+
+/* Убираем правую границу у последнего столбца */
+.flex-cell:last-child {
+    border-right: none;
+}
+
+/* Специфические настройки ширины для разных колонок */
+.flex-cell.name {
+    flex: 1.5;
+    justify-content: flex-start;
+    text-align: left;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.flex-cell.stars {
+    justify-content: center;
+    gap: 0.1rem;
+    font-size: 1.1rem;
+}
+
+.flex-cell.price {
+    color: var(--primary-dark);
+    font-weight: 500;
+}
+
+.flex-cell.specific {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* ЗВЕЗДЫ */
+.star {
+    color: #c0c0c0;
+}
+.star.filled {
+    color: #ffb300; /* Золотой цвет из ваших переменных */
+}
+
+.flex-header div, .flex-row div {
+    width: 20%;
+}
+
+/* АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ */
+@media (max-width: 900px) {
+    .flex-header {
+        display: none; /* Скрываем шапку таблицы */
+    }
+
+    .flex-row {
+        flex-direction: column;
+        padding: 1rem;
+        border-bottom: 1px dashed #e1e5eb;
+    }
+
+    .flex-cell {
+        border: none;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+    }
+
+    .flex-cell:last-child {
+        border-bottom: none;
+    }
+
+    .flex-cell.name {
+        font-size: 1.1rem;
+        border-bottom: 1px solid #f0f4f8;
+        margin-bottom: 0.5rem;
+    }
+
+    .flex-cell.stars {
+        font-size: 1.2rem;
+    }
+}
+/* --- ОБЩИЕ СТИЛИ (из прошлых страниц) --- */
+:root {
+    --primary: #0d47a1;
+    --primary-dark: #0d193d;
+    --bg-page: #f4f7fb;
+    --bg-card: #ffffff;
+    --text-main: #2c3e50;
+    --text-muted: #546e7a;
+    --accent: #ffb300;
+    --radius: 14px;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    --container-width: 1200px;
+}
+
+/* ... [здесь остаются базовые стили body, container, flex-content, img-placeholder из прошлых файлов] ... */
+
+/* --- СПЕЦИФИЧНЫЕ СТИЛИ ДЛЯ ГЛАВНОЙ --- */
+
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.module-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid #e1e5eb;
+    transition: var(--transition);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 0.6s ease-out forwards;
+}
+
+/* Анимация появления с задержкой для каждой карточки */
+.module-card:nth-child(1) { animation-delay: 0.2s; }
+.module-card:nth-child(2) { animation-delay: 0.4s; }
+.module-card:nth-child(3) { animation-delay: 0.6s; }
+
+.module-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    border-color: var(--accent);
+}
+
+/* Делаем всю карточку кликабельной */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+    transition: var(--transition);
+}
+
+.card-link:hover .block-header h3 {
+
+}
+
+.card-link:hover .icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Стили для кнопки теста в шапке */
+.nav .btn-test {
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.nav .btn-test:hover {
+    background: var(--accent);
+    color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* --- ADAPTIVITY --- */
+@media (max-width: 768px) {
+    .modules-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .module-card {
+        transform: translateY(0);
+        opacity: 1;
+        animation: none;
+    }
+}
